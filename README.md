@@ -1,44 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Treasure Hunting
 
-## Available Scripts
+Browser-based multiplayer game about solving puzzles in a team.
 
-In the project directory, you can run:
+## Gameplay
 
-### `yarn start`
+### Overview
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Two teams of 3 are given a series of puzzles to solve against a ticking clock. The team with the most number of credits at the end wins.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Answering correctly grants you credits which can be used by a team to either get a hint (atmost 1 per 2 questions), extend time limit by a little bit (atmost 1 per question), or life lines (atmost 1 per game).
 
-### `yarn test`
+### Phases
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There are two phases to each puzzle in the game:
 
-### `yarn build`
+- Question Phase: The puzzle is presented and the teams are given a set amount of time to talk. In this phase, each team can use their credits for hints, time extensions, or life lines. To purchase any of the abilities with credits, someone must initiate a request to vote for the purchase. Aleast 2 of the 3 members have to vote positively for the purchase to be successful. After this set amount of time is over, the voting phase starts.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Answer Phase: Each member of a team enters an answer. After everyone is done typing the answer, the typed unique answers are visible to everyone in the team. The answer with majority votes becomes the team's final answer. Depending on the answer being correct or incorrect, the team gets credits and move on.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Contribution
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions make open source fun. This project is very much in infancy so feel free to work on anything and everything.
