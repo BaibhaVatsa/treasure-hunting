@@ -2,13 +2,21 @@
   "name": "treasure_hunting_server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Baibhav Vatsa",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/express": "^4.17.2",
+    "@types/node": "^12.12.21",
+    "express": "^4.17.1",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
   }
 }
